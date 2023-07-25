@@ -10,7 +10,7 @@ const btnClose = document.getElementById('window__close');
 area.addEventListener('click', e => {
     if(e.target.className = 'area__box_item') {
         console.log(e.target);
-        move % 2 === 0 ? e.target.innerHTML = '<img src="/images/x.png">': e.target.innerHTML = '<img src="/images/0.png">'
+        move % 2 === 0 ? e.target.innerHTML = '<img src="./images/x.png">': e.target.innerHTML = '<img src="./images/0.png">'
         move++;
         check();
     }
@@ -34,12 +34,12 @@ const check = () => {
     ];
 
     for(let i = 0; i < arr.length; i++) {
-        if(boxes[arr[i][0]].innerHTML == '<img src="/images/x.png">' && boxes[arr[i][1]].innerHTML == '<img src="/images/x.png">' && boxes[arr[i][2]].innerHTML == '<img src="/images/x.png">') {
+        if(boxes[arr[i][0]].innerHTML == '<img src="./images/x.png">' && boxes[arr[i][1]].innerHTML == '<img src="./images/x.png">' && boxes[arr[i][2]].innerHTML == '<img src="./images/x.png">') {
             result = 'Крестики';
             prepareResult(result);
         }
 
-        else if(boxes[arr[i][0]].innerHTML == '<img src="/images/0.png">' && boxes[arr[i][1]].innerHTML == '<img src="/images/0.png">' && boxes[arr[i][2]].innerHTML == '<img src="/images/0.png">') {
+        else if(boxes[arr[i][0]].innerHTML == '<img src="./images/0.png">' && boxes[arr[i][1]].innerHTML == '<img src="./images/0.png">' && boxes[arr[i][2]].innerHTML == '<img src="./images/0.png">') {
             result = 'Нолики';
             prepareResult(result);
         }
